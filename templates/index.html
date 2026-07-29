@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>EduGuide AI</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+<nav>
+
+<div class="logo">
+🎓 EduGuide AI
+</div>
+
+
+<ul>
+
+<li><a href="#home">🏠 Home</a></li>
+<li><a href="#features">✨ Features</a></li>
+<li><a href="#about">💚 About</a></li>
+
+</ul>
+
+</nav>
+
+
+
+<section class="hero" id="home">
+
+
+<h1>
+Learn, Don't Just Get Answers.
+</h1>
+
+
+<p>
+AI-powered personalised tutoring that explains concepts step by step.
+</p>
+
+
+<a href="#ask">
+
+<button>
+Ask Your Doubt
+</button>
+
+</a>
+
+
+</section>
+
+<section id="features" class="features">
+
+<h2>✨ Why Choose EduGuide AI?</h2>
+
+<div class="feature-grid">
+
+<div class="feature-card">
+<h3>📘 Learn Concepts</h3>
+<p>Understand the topic instead of memorizing answers.</p>
+</div>
+
+<div class="feature-card">
+<h3>🪜 Step-by-Step</h3>
+<p>Every answer is broken into simple learning steps.</p>
+</div>
+
+<div class="feature-card">
+<h3>🎯 Practice Yourself</h3>
+<p>Test your understanding with interactive questions.</p>
+</div>
+
+<div class="feature-card">
+<h3>📷 Solve from Images</h3>
+<p>Take a picture of your notebook and get instant explanations.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section id="ask">
+
+
+    <div class="card">
+
+<h2>☁️ Ask your doubt</h2>
+
+<p class="subtitle">
+Type it however feels natural — spelling mistakes and mixed languages are totally fine.
+</p>
+
+<textarea
+id="question"
+placeholder="e.g. Why does ice float on water? 🧊&#10;&#10;Why is the sky blue? ☁&#10;&#10;Explain Newton's Third Law 🚀"></textarea>
+
+<div class="upload-row">
+
+<input
+id="image"
+type="file"
+accept="image/*"
+capture="environment"
+hidden>
+
+<p id="imageName" style="margin-top:10px;color:#1F4A35;"></p>
+
+<button
+type="button"
+class="upload-btn"
+onclick="document.getElementById('image').click()">
+
+📷 Take / Upload Photo
+
+</button>
+
+</div>
+
+<button id="explainBtn">
+
+🚀 Ask EduGuide AI
+
+</button>
+
+</div>
+
+
+</section>
+
+
+
+
+
+<section class="response">
+
+
+<h2>
+📚 Your Learning Journey
+</h2>
+
+
+
+
+<div class="response-card">
+
+<h3>
+📘 Concept
+</h3>
+
+<p id="concept">
+Waiting for AI...
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="response-card">
+
+
+<h3>
+📝 Step-by-Step Explanation
+</h3>
+
+
+<p id="steps">
+Waiting for AI...
+</p>
+
+
+</div>
+
+
+
+
+
+
+<div class="response-card">
+
+
+<h3>
+🌍 Real-Life Example
+</h3>
+
+
+<p id="example">
+Waiting for AI...
+</p>
+
+
+</div>
+
+
+<div class="response-card">
+
+<h3>
+📊 How It Works
+</h3>
+
+<div id="flowchart" class="flowchart">
+
+<p class="flow-placeholder">Waiting for AI...</p>
+
+</div>
+
+</div>
+
+
+
+
+<div class="response-card">
+
+
+<h3>
+✅ Key Takeaway
+</h3>
+
+
+<p id="takeaway">
+Waiting for AI...
+</p>
+
+
+</div>
+
+
+
+
+
+
+<div class="response-card">
+
+
+<h3>
+🎯 Practice Question
+</h3>
+
+
+<p id="practice">
+Waiting for AI...
+</p>
+
+<br>
+
+<label for="studentAnswer">
+
+📝 Your Answer
+
+</label>
+
+<textarea
+
+id="studentAnswer"
+
+placeholder="Type your answer here..."></textarea>
+
+<button
+
+id="checkAnswerBtn">
+
+✅ Check My Answer
+
+</button>
+
+<div
+
+id="feedback"
+
+class="feedback-box">
+
+Feedback will appear here.
+
+</div>
+
+
+</div>
+
+
+
+
+</section>
+
+<section id="about" class="about">
+
+<h2>📖 About EduGuide AI</h2>
+
+<p>
+
+EduGuide AI is an AI-powered learning assistant designed to help students truly understand concepts instead of simply providing answers.
+
+It explains topics step by step, provides examples, creates practice questions, and encourages active learning.
+
+</p>
+
+</section>
+
+
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+
+
+</body>
+
+
+</html>
